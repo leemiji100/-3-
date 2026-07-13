@@ -60,6 +60,7 @@ Filter/Router: 과목 중요도 판별
 
 경로 A (전공): "전공 수업이 있는 날입니다! 집중하세요!"라는 문구 추가.
 경로 B (교양/기타): "비교적 여유로운 교양 수업이 있는 날입니다."라는 문구 추가.
+<img width="466" height="367" alt="image" src="https://github.com/user-attachments/assets/0ec4f4c0-fbcb-40a3-a0db-64e7df5e4a46" />
 
 Action 2: Discord 또는 Slack (Send a Message)
 최종 정리된 수업 리스트(과목, 시간, 요일)를 메시지로 전송합니다.
@@ -95,6 +96,8 @@ Filter: '구분'이 '전공'인 경우만 통과
 
 Action 1: Google Calendar - Create Detailed Event
 Action 2: Slack 또는 Gmail - 나에게 알림 보내기
+
+
 Make(메이크) 접속:
 위와 동일한 순서로 모듈을 배치하여 연결합니다.
 
@@ -112,6 +115,7 @@ Make(메이크) 접속:
 Make 사용 추천: Make는 'Router' 기능을 쓰기 매우 편리합니다.
 
 Trigger: 구글 시트 새 행 추가
+<img width="938" height="607" alt="image" src="https://github.com/user-attachments/assets/078fae68-9e8b-4b2e-81ae-f32797246c07" />
 
 Router 설치: 경로를 두 개로 나눕니다.
 경로 1 (전공): 필터 설정 후 전공 전용 액션 수행
@@ -121,7 +125,36 @@ Router 설치: 경로를 두 개로 나눕니다.
 실제로 실행된 후, 두 경로 모두 초록색 체크 표시가 뜬 결과 화면 (각각 한 번씩 실행해봐야 함)
 4단계: 보고서 작성 (Markdown 또는 PDF)
 캡처한 사진들을 넣고 아래 내용을 텍스트로 정리합니다.
+<img width="666" height="260" alt="image" src="https://github.com/user-attachments/assets/1eb95396-32f5-439a-b51c-e0e778eb7307" />
 
-도구 비교표: 아까 제가 표로 정리해 드린 내용을 참고해서 본인의 느낌을 추가하세요.
-선정 이유: 왜 프로젝트 2에서 해당 도구를 썼는지 (예: "Make는 시각적인 루터 배치가 직관적이라 선택함")
-용어 설명: Trigger, Action, Filter가 본인의 프로젝트에서 어떤 역할을 했는지 한 문장씩 적으세요.
+
+1. 도구 비교표
+항목	Zapier	Make	나의 의견
+사용 난이도	쉬움	조금 어려움	Zapier는 처음 사용하기 편했고, Make는 익숙해지는 데 시간이 조금 걸렸다.
+인터페이스	단순	시각적	Make는 모듈 연결이 한눈에 보여 흐름을 이해하기 쉬웠다.
+조건 분기	제한적	Router 제공	Router를 이용해 전공과 교양을 쉽게 구분할 수 있어서 편리했다.
+데이터 가공	기본 수준	다양함	Make는 Filter와 Router를 함께 사용할 수 있어 다양한 자동화가 가능했다.
+무료 플랜	제한 있음	비교적 자유	과제를 수행하기에는 Make의 무료 기능이 더 충분하다고 느꼈다.
+2. 프로젝트 2에서 Make를 선택한 이유
+
+프로젝트 2에서는 Make를 사용하였다. Make는 Router 기능을 이용하여 전공과 교양을 쉽게 분기할 수 있었고, 시각적으로 모듈이 연결되어 있어 자동화 과정을 이해하기 쉬웠다. 또한 Discord와 연동하여 조건에 맞는 메시지를 자동으로 전송하는 기능을 구현하기 편리하다고 생각하였다.
+
+3. 용어 설명
+
+Trigger
+
+Google Sheets에 새로운 수업 정보가 추가되면 자동화를 시작하는 역할을 한다.
+
+Action
+
+조건을 만족한 데이터를 이용하여 Discord로 메시지를 보내는 역할을 한다.
+
+Filter
+
+'구분' 값이 전공인지 교양인지 확인하여 각각 다른 경로로 데이터를 보내는 역할을 한다.
+
+Trigger: Google Sheets Watch New Rows
+Action: Discord Send a Message
+Filter: 전공/교양 구분
+Router: 전공과 교양을 각각 다른 메시지로 분기
+
