@@ -48,12 +48,14 @@ UI/UX	직관적인 리스트 형태, 초보자 친화적	시각적인 캔버스 
 3. 워크플로우 설계 (단계별 설명)
 Trigger: Schedule (매일 오전 8시)
 매일 정해진 시간에 자동 실행되도록 설정합니다.
+<img width="406" height="687" alt="image" src="https://github.com/user-attachments/assets/0c4ae292-586c-4708-8fc5-70c06b97e178" />
 
 Action 1: Google Sheets (Search Rows)
 
 
 시간표가 적힌 구글 시트에서 '요일' 열이 '오늘 요일'과 일치하는 행들을 찾아옵니다.
 Filter/Router: 과목 중요도 판별
+<img width="751" height="226" alt="image" src="https://github.com/user-attachments/assets/70e3c789-f5de-4504-a091-feb17f173ff1" />
 
 
 경로 A (전공): "전공 수업이 있는 날입니다! 집중하세요!"라는 문구 추가.
@@ -72,8 +74,20 @@ Action 2: Discord 또는 Slack (Send a Message)
 과목명, 요일, 시간, 강의실, 구분(전공/교양)
 
 테스트용 데이터를 3~5개 정도 입력하세요. (예: 데이터구조, 월요일, 09:00, 201호, 전공)
+
+
+
+
+
+
+
+
 2단계: [프로젝트 1] 구현하기 (Zapier & Make)
 동일한 흐름을 두 도구에서 각각 만듭니다.
+
+
+
+
 
 Zapier(재피어) 접속:
 Trigger: Google Sheets - New Spreadsheet Row
