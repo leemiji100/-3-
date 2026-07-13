@@ -3,35 +3,111 @@
 
 1. 워크플로우 설계 (동일 구조)
 Trigger: 구글 시트(Google Sheets)에 새로운 행(강의 정보)이 추가될 때
+<img width="743" height="174" alt="image" src="https://github.com/user-attachments/assets/59dad6a6-506a-44a8-b762-8526458cb209" />
+
 Filter: 과목 구분(전공 vs 교양) 확인
 조건: '구분' 열의 값이 "전공"인 경우만 실행 (또는 전공/교양에 따라 경로 분리)
+
+<img width="907" height="319" alt="image" src="https://github.com/user-attachments/assets/3ab1740e-2a06-4ab6-b2f2-d1b39201579e" />
+
 Action 1: 구글 캘린더(Google Calendar)에 일정 생성
-Action 2: 슬랙(Slack) 또는 카카오톡(나에게 보내기)으로 강의 등록 알림 전송
+
+Action 2: 구글 알람 또는 카카오톡(나에게 보내기)으로 강의 등록 알림 전송
+<img width="400" height="272" alt="image" src="https://github.com/user-attachments/assets/0cd1052d-b014-419d-8637-d61cb8713bf9" />
+
+
+
 2. 비교 도구 선정: Zapier vs Make (구 Integromat)
 비교 항목	Zapier	Make (Integromat)
 UI/UX	직관적인 리스트 형태, 초보자 친화적	시각적인 캔버스 형태, 흐름 파악 용이
+<img width="662" height="814" alt="image" src="https://github.com/user-attachments/assets/0f4f1185-3ee9-4008-8724-529ea8a5c823" />
+
 설정 난이도	매우 쉬움 (Step-by-step)	중간 (데이터 매핑 방식이 조금 더 복잡함)
 연동 서비스	가장 넓은 범위의 앱 지원	Zapier보다는 적지만 핵심 앱 대부분 지원
 무료 플랜	월 100회 실행, 필터 사용 제한적	월 1,000회 실행, 복잡한 필터/루터 가능
 실행 로그	깔끔한 리스트 형태	각 모듈별 데이터 흐름을 시각적으로 확인
+
+
+
+
 [프로젝트 2] 자유 주제 자동화 설계 및 구현
 주제: "오늘의 수업 브리핑 자동화"
 
 1. 업무 정의
 매일 아침 8시에 그날 들어야 할 수업 목록(과목명, 시간, 강의실)을 확인하여 나에게 요약 메시지를 보내는 반복 업무를 자동화합니다.
 
+<img width="565" height="141" alt="image" src="https://github.com/user-attachments/assets/e72d6378-e15d-4502-9da4-9f2d3ad746aa" />
+
+
 2. 도구 선정 및 이유
 선정 도구: Make (Integromat)
 선정 이유:
 무료 플랜에서도 'Router(조건 분기)' 기능을 자유롭게 사용할 수 있습니다.
 데이터를 가공(날짜 필터링 등)하는 기능이 Zapier보다 강력하여 시간표 관리에 적합합니다.
+
 3. 워크플로우 설계 (단계별 설명)
 Trigger: Schedule (매일 오전 8시)
 매일 정해진 시간에 자동 실행되도록 설정합니다.
+
 Action 1: Google Sheets (Search Rows)
+
+
 시간표가 적힌 구글 시트에서 '요일' 열이 '오늘 요일'과 일치하는 행들을 찾아옵니다.
 Filter/Router: 과목 중요도 판별
+
+
 경로 A (전공): "전공 수업이 있는 날입니다! 집중하세요!"라는 문구 추가.
 경로 B (교양/기타): "비교적 여유로운 교양 수업이 있는 날입니다."라는 문구 추가.
+
 Action 2: Discord 또는 Slack (Send a Message)
 최종 정리된 수업 리스트(과목, 시간, 요일)를 메시지로 전송합니다.
+
+
+
+1단계: 기초 데이터 만들기 (Google Sheets)
+가장 먼저 자동화의 소스가 될 데이터를 만들어야 합니다.
+
+구글 스프레드시트를 하나 만드세요.
+첫 번째 행(헤더)에 다음과 같이 입력하세요:
+과목명, 요일, 시간, 강의실, 구분(전공/교양)
+
+테스트용 데이터를 3~5개 정도 입력하세요. (예: 데이터구조, 월요일, 09:00, 201호, 전공)
+2단계: [프로젝트 1] 구현하기 (Zapier & Make)
+동일한 흐름을 두 도구에서 각각 만듭니다.
+
+Zapier(재피어) 접속:
+Trigger: Google Sheets - New Spreadsheet Row
+Filter: '구분'이 '전공'인 경우만 통과
+
+Action 1: Google Calendar - Create Detailed Event
+Action 2: Slack 또는 Gmail - 나에게 알림 보내기
+Make(메이크) 접속:
+위와 동일한 순서로 모듈을 배치하여 연결합니다.
+
+📸 캡처 필수:
+전체 워크플로우 화면 (연결된 모습)
+필터(Filter) 설정창 화면
+
+
+3단계: [프로젝트 2] 구현하기 (자유 주제)
+
+
+[프로젝트 1]에서 만든 것을 조금 더 발전시키거나, 새로운 시나리오를 만듭니다. **'조건 분기(Router)'**가 핵심입니다.
+
+시나리오 예시: "수업 등록 시 전공이면 '빨간색' 캘린더에, 교양이면 '파란색' 캘린더에 넣기"
+Make 사용 추천: Make는 'Router' 기능을 쓰기 매우 편리합니다.
+
+Trigger: 구글 시트 새 행 추가
+
+Router 설치: 경로를 두 개로 나눕니다.
+경로 1 (전공): 필터 설정 후 전공 전용 액션 수행
+경로 2 (교양): 필터 설정 후 교양 전용 액션 수행
+
+📸 캡처 필수:
+실제로 실행된 후, 두 경로 모두 초록색 체크 표시가 뜬 결과 화면 (각각 한 번씩 실행해봐야 함)
+4단계: 보고서 작성 (Markdown 또는 PDF)
+캡처한 사진들을 넣고 아래 내용을 텍스트로 정리합니다.
+
+도구 비교표: 아까 제가 표로 정리해 드린 내용을 참고해서 본인의 느낌을 추가하세요.
+선정 이유: 왜 프로젝트 2에서 해당 도구를 썼는지 (예: "Make는 시각적인 루터 배치가 직관적이라 선택함")
+용어 설명: Trigger, Action, Filter가 본인의 프로젝트에서 어떤 역할을 했는지 한 문장씩 적으세요.
