@@ -15,6 +15,7 @@ Filter: 과목 구분(전공 vs 교양) 확인
 
 <br>
 
+<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/3317e55c-535c-4c91-ad31-aa465f8bfde7" />
 
 
 Action 1: 구글 캘린더(Google Calendar)에 일정 생성
