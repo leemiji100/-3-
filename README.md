@@ -89,9 +89,7 @@ Filter: '구분'이 '전공'인 경우만 통과
 <img width="409" height="711" alt="image" src="https://github.com/user-attachments/assets/a55300d4-f8d8-4760-a64c-a087545390a8" />
 
 Action 1: Google Calendar - Create Detailed Event
-<img width="331" height="88" alt="image" src="https://github.com/user-attachments/assets/a37ce4a8-c14b-42f3-8a06-569b4ec9b91c" />
-
-
+<img width="1080" height="2340" alt="image" src="https://github.com/user-attachments/assets/1ece9a47-eadf-4e04-b5d7-403a59fbb149" />
 Action 2:  Gmail - 나에게 알림 보내기
 
 
