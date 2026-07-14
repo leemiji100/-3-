@@ -86,26 +86,27 @@ Action 2: Discord 또는 Slack (Send a Message)
 Zapier(재피어) 접속:
 Trigger: Google Sheets - New Spreadsheet Row
 Filter: '구분'이 '전공'인 경우만 통과
+<img width="409" height="711" alt="image" src="https://github.com/user-attachments/assets/a55300d4-f8d8-4760-a64c-a087545390a8" />
 
 Action 1: Google Calendar - Create Detailed Event
+
+
 Action 2: Slack 또는 Gmail - 나에게 알림 보내기
+
 
 
 Make(메이크) 접속:
 위와 동일한 순서로 모듈을 배치하여 연결합니다.
-
 📸 캡처 필수:
 전체 워크플로우 화면 (연결된 모습)
-필터(Filter) 설정창 화면
+<img width="850" height="248" alt="image" src="https://github.com/user-attachments/assets/89f31d2e-6ab9-455b-91e0-90078f2e37d3" />
 
+필터(Filter) 설정창 화면
+<img width="429" height="905" alt="image" src="https://github.com/user-attachments/assets/8ffe9fb7-e84f-4c05-9701-f5a842cad624" />
 
 3단계: [프로젝트 2] 구현하기 (자유 주제)
 
-
 [프로젝트 1]에서 만든 것을 조금 더 발전시키거나, 새로운 시나리오를 만듭니다. **'조건 분기(Router)'**가 핵심입니다.
-
-
-
 Trigger: 구글 시트 새 행 추가
 <img width="938" height="607" alt="image" src="https://github.com/user-attachments/assets/078fae68-9e8b-4b2e-81ae-f32797246c07" />
 
