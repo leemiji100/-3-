@@ -132,10 +132,17 @@ Make(메이크) 접속:
 위와 동일한 순서로 모듈을 배치하여 연결합니다.
 📸 캡처 필수:
 전체 워크플로우 화면 (연결된 모습)
+
 <img width="850" height="248" alt="image" src="https://github.com/user-attachments/assets/89f31d2e-6ab9-455b-91e0-90078f2e37d3" />
+
+<br>
+
 
 필터(Filter) 설정창 화면
 <img width="429" height="905" alt="image" src="https://github.com/user-attachments/assets/8ffe9fb7-e84f-4c05-9701-f5a842cad624" />
+
+<br>
+
 
 <br>
 
