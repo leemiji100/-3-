@@ -73,7 +73,7 @@ UI/UX	직관적인 리스트 형태, 초보자 친화적	시각적인 캔버스 
 
 
 3. 워크플로우 설계 (단계별 설명)
-Trigger: Schedule (매일 오전 8시)
+Trigger: Schedule 
 매일 정해진 시간에 자동 실행되도록 설정합니다.
 <img width="406" height="687" alt="image" src="https://github.com/user-attachments/assets/0c4ae292-586c-4708-8fc5-70c06b97e178" />
 
