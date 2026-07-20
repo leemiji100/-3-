@@ -180,7 +180,12 @@ Make(메이크) 접속:
 
 현황: ✅ 완료
 내용: 'Make'를 선정하셨고, 이유로 '무료 플랜의 Router 기능'과 '강력한 데이터 가공 기능'을 구체적으로 작성하셨습니다.
+
+
 3. 자동 실행 구조 구현 (Trigger/Action/Router)
+
+
+
 <img width="484" height="303" alt="image" src="https://github.com/user-attachments/assets/5121ec2c-412f-4e6c-8e21-b4ac6b4878e2" />
 
 
