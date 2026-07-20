@@ -88,12 +88,18 @@ Action 1: Google Sheets (Search Rows)
 Filter/Router: 과목 중요도 판별
 <img width="751" height="226" alt="image" src="https://github.com/user-attachments/assets/70e3c789-f5de-4504-a091-feb17f173ff1" />
 
-
+<img width="484" height="303" alt="image" src="https://github.com/user-attachments/assets/5121ec2c-412f-4e6c-8e21-b4ac6b4878e2" />
 경로 A (전공): "전공 수업이 있는 날입니다! 집중하세요!"라는 문구 추가.
 경로 B (교양/기타): "비교적 여유로운 교양 수업이 있는 날입니다."라는 문구 추가.
 <img width="466" height="367" alt="image" src="https://github.com/user-attachments/assets/0ec4f4c0-fbcb-40a3-a0db-64e7df5e4a46" />
 
 <br>
+
+
+
+
+
+
 
 
 Action 2: Discord 또는 Slack (Send a Message)
@@ -104,6 +110,10 @@ Action 2: Discord 또는 Slack (Send a Message)
 첫 번째 행(헤더)에 다음과 같이 입력하세요:
 과목명, 요일, 시간, 강의실, 구분(전공/교양)
 테스트용 데이터를 3~5개 정도 입력하세요. (예: 데이터구조, 월요일, 09:00, 201호, 전공)
+
+
+
+
 <img width="921" height="386" alt="image" src="https://github.com/user-attachments/assets/457fb5e1-efb5-405f-b5e0-fd65698ec20b" />
 
 
